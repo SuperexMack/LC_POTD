@@ -1,0 +1,21 @@
+class Solution {
+public:
+    int pivotInteger(int n) {
+        // tell me the number jiske left right ka sum equal ho
+        int totalSum = 0;
+        for(int i = 1; i <= n; i++){
+            totalSum += i;
+        }
+
+        int finalSum = 0;
+
+        for(int i =  n; i >= 1; i--){
+            finalSum += i;
+            if(totalSum - finalSum + i == finalSum){
+                return i;
+            }
+        }
+
+        return -1;
+    }
+};
