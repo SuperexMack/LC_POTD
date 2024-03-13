@@ -11,7 +11,8 @@ public:
 
         int finalSum = 0;
 
-        for(int i =  n; i >= 1; i--){
+        // we can traverse it from beginning too
+        for(int i =  1; i <= n; i++){
             finalSum += i;
             if(totalSum - finalSum + i == finalSum){
                 return i;
